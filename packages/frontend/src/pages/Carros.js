@@ -38,7 +38,7 @@ async obtener() {
                 key={data._id}
                 onDoubleClick={()=> this.deleteplaca(data._id)}
               >
-                x
+                {data.id_parq}
               </li>
             ))}
           </ul>
