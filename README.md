@@ -2,8 +2,8 @@
 
 
 Autores:  
-Richard Gil
-Juan José
-Diego
-Santiago Durango
-Edilber
+Richard Gil | 
+Juan José |
+Diego |
+Santiago Durango |
+Edilber 
