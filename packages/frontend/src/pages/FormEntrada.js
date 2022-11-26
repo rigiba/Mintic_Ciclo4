@@ -5,6 +5,13 @@ import axios from "axios";
 export default function FormEntrada() {
   const [InitPlaca, setPlaca] = useState(''); /*Función para dejar en blanco nuevamente la placa*/
   // obtener captura del tiempo.
+  const [park, setPark] = useState(''); /*Función para dejar en blanco nuevamente la placa*/
+
+  const handleChange = e => {
+    setPlaca(prev => ({...prev, [e.target.placa]: e.target.value}));
+  };
+
+
   const [initTime, setTime] = useState();
 
   var tiempoActual = new Date();
@@ -29,11 +36,11 @@ export default function FormEntrada() {
 
        onsubmit = async (e) => {
         e.preventDefault();
-        console.log(InitPlaca);
+        console.log(e);
         await axios.post('http://localhost:3005/parqueaderos/',{
-            id_parq: "203",
-            placa: "444",
-            tipo_vehiculo: "CARRO VARIADO"
+            id_parq: e.target.park.value,
+            placa: e.target.placa.value,
+            tipo_vehiculo: e.target.tipo_vehiculo.value
         })
         .then(res => console.log(res))
         .catch(err => console.log(err));
@@ -71,8 +78,21 @@ export default function FormEntrada() {
 
   return (
     <div className="FormEntrada">
-      <form className="Formulario">
+      <form className="Formulario" >
         <h2 className="titulo-componente">Registro de Vehiculo</h2>
+        <div className="resgitro-placa">
+          <label className="label-placa"># Park:</label>
+          <br></br>
+          <input
+            type="text"
+            id="park"
+            name="park"
+            className="placa"
+            value={park.park}
+            // onChange={()=>enviarDatos()}
+            placeholder="Ingrese #"
+          />
+        </div>
         <div className="resgitro-placa">
           <label className="label-placa">Placa Vehiculo:</label>
           <br></br>
@@ -81,7 +101,7 @@ export default function FormEntrada() {
             id="placa"
             name="placa"
             className="placa"
-            value={InitPlaca}
+            value={InitPlaca.placa}
             // onChange={()=>enviarDatos()}
             placeholder="Ingrese la placa del vehiculo"
           />

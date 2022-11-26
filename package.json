@@ -1,7 +1,9 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "workspaces":["packages/*"],
+  "workspaces": [
+    "packages/*"
+  ],
   "description": "",
   "main": "app.js",
   "scripts": {
@@ -10,7 +12,15 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies":{
-    "nodemon":"^2.0.4"
-  }
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rigiba/Mintic_Ciclo4.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rigiba/Mintic_Ciclo4/issues"
+  },
+  "homepage": "https://github.com/rigiba/Mintic_Ciclo4#readme"
 }
