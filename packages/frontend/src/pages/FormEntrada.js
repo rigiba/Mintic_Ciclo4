@@ -29,14 +29,14 @@ export default function FormEntrada() {
 
        onsubmit = async (e) => {
         e.preventDefault();
-        console.log(InitPlaca);
+        console.log(e);
         await axios.post('http://localhost:3005/parqueaderos/',{
             id_parq: "203",
-            placa: "444",
+            placa: "1111",
             tipo_vehiculo: "CARRO VARIADO"
         })
-        .then(res => console.log(res))
-        .catch(err => console.log(err));
+        // .then(res => console.log(res))
+        // .catch(err => console.log(err));
        }
 
     // onchange = (e) => {
