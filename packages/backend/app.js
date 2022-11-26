@@ -3,9 +3,11 @@ const indexRouter = require('./routes/index.routes');
 const path = require ("path");
 const database = require("./config/database"); // conexion base datos desde config con database.js
 var parqueaderosRouter = require('./routes/parqueaderos.router');
-
 const logger = require('morgan'); // identificar las peticiones que llegan - codigos http
+var cookieParser = require("cookie-parser");
 
+
+var cors = require("cors");
 
 
 const app = express();
@@ -15,7 +17,7 @@ app.set('views', path.join(__dirname, 'views'))
 
 
 // Connection Srv
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 3005
 app.listen(PORT, ()=>{
     console.log('App running in port: '+PORT)
 })
@@ -27,6 +29,9 @@ database.mongoConnect();
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(cors()); 
+
 
 
 //Routes

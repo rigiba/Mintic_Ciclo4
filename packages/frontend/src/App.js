@@ -1,34 +1,31 @@
-import './App.css';
-//import 'bootstrap/dist/css/bootstrap.min.css';
-//import DataTable from 'react-data-table-component';
-//import { setSelectionRange } from '@testing-library/user-event/dist/utils';
-//import { Container } from "@material-ui/core";
 import React from "react";
-import FormEntrada from "./components/FormEntrada";
-import FormSalida from "./components/FormSalida";
-import TablaDatos from "./components/TablaDatos";
-//import DataTable from './components/DataTable.js';
- //import MaterialTable from "material-table";
-//import { type } from "@testing-library/user-event/dist/type";
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom'
+
+import './App.scss';
+import Navbar from './components/Navbar';
+import Sidebar from './components/Sidebar';
+import Servicios from './pages/Servicios';
+import Usuarios from "./pages/Usuarios";
+import Carros from "./pages/Carros";
 
 
 function App() {
-
-  
   return (
-    <div className="container-principal">
-    <div className="container-1">
-  
-    <FormEntrada/>
-    <FormSalida/>
-  
-    </div>
-      <div className="container-2">
-        <TablaDatos/>
-      </div>
-      
+    <Router>
+       <Navbar />
+       <div className="flex">
+          <Sidebar />
+          <div className="content p-4">
+            <Routes>
+                <Route exact path="/" element={<Servicios/>}/>                
+                <Route exact path="/usuarios" element={<Usuarios/>}/>
+                <Route exact path="/Carros" element={<Carros/>}/>
 
-    </div>
+            </Routes>
+          </div>
+        </div> 
+    </Router>
+
   );
 }
 

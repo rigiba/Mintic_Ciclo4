@@ -1,2 +1,9 @@
 # Mintic_Ciclo4
-App Parqueadero
+
+
+Autores:  
+Richard Gil
+Juan José
+Diego
+Santiago Durango
+Edilber

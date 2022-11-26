@@ -1,0 +1,53 @@
+.FormEntrada{
+    height: 400px;
+    max-width: 600px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    /* background: rgb(34,193,195); */
+    /* background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%); */
+    background-color: hsl(56, 91%, 48%);
+    padding: 30px 30px;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.Formulario{
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+    width: 100%;
+}
+.tiempo-box{
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    font-size: 15px;
+}
+
+
+.Formulario .titulo-componente {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.Formulario .placa {
+    font-size: 20px;
+}
+.boton-entrada{
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #fff;
+    background-color: #171817;
+    border-radius: 6px;
+    border: 2px solid #030303;
+}
+
+.placa{
+    border-radius: 4px;
+}

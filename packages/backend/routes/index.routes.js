@@ -10,6 +10,10 @@ router.get('/park', (req, res) => {
     res.send('<h1>ssss</h1>')
 })
 
+router.post('/park', (req, res) => {
+    res.send('<h1>ssss</h1>')
+})
+
 router.get('/about', (req, res) => {
     res.send("Acerca de Parking ")
 })
